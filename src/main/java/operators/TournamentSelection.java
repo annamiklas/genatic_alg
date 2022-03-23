@@ -4,13 +4,14 @@ import java.util.*;
 
 public class TournamentSelection implements SelectionOperator {
 
-    private final Random rand = new Random();
+    private final Random rand;
     private final int tournamentFactor;
     private final int populationSize;
 
-    public TournamentSelection(int tournamentFactor, int populationSize) {
+    public TournamentSelection(int tournamentFactor, int populationSize, Random rand) {
         this.tournamentFactor = tournamentFactor;
         this.populationSize = populationSize;
+        this.rand = rand;
     }
 
     @Override
